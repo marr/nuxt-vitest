@@ -48,7 +48,8 @@ describe('test utils', () => {
       "<div>This is an auto-imported component</div>
       <div> I am a global component </div>
       <div>Index page</div>
-      <a href=\\"/test\\"> Test link </a>"
+      <a href=\\"/test\\"> Test link </a>
+      <p class=\\"pinia\\">hi vitest</p>"
     `)
   })
 
@@ -114,7 +115,13 @@ describe('test utils', () => {
       "<div>This is an auto-imported component</div>
       <div> I am a global component </div>
       <div>/</div>
-      <a href=\\"/test\\"> Test link </a>"
+      <a href=\\"/test\\"> Test link </a>
+      <p class=\\"pinia\\">hi vitest</p>"
     `)
+  })
+
+  it('handles pinia auto imports', async () => {
+    const component = await mountSuspended(App)
+    expect(component.find('.pinia').text()).toBe('hi vitest');
   })
 })

@@ -3,13 +3,18 @@ export default defineNuxtConfig({
   modules: [
     '../packages/nuxt-vitest/src/module',
     '@nuxt/devtools',
+    '@pinia/nuxt',
     '~/modules/custom',
   ],
   vitest: {
     startOnBoot: true,
     logToConsole: true,
   },
+  pinia: {
+    autoImports: [['defineStore', 'definePiniaStore']]
+  },
   imports: {
+    dirs: ['stores'],
     injectAtEnd: true,
   },
   vite: {

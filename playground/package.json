@@ -20,5 +20,9 @@
     "vitest-environment-nuxt": "0.8.5",
     "vue-tsc": "1.6.5"
   },
-  "version": "0.8.5"
+  "version": "0.8.5",
+  "dependencies": {
+    "@pinia/nuxt": "^0.4.11",
+    "pinia": "^2.1.3"
+  }
 }

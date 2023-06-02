@@ -17,6 +17,7 @@ it('should mock', async () => {
     "<div>Mocked</div>
     <div> I am a global component </div>
     <div>Index page</div>
-    <a href=\\"/test\\"> Test link </a>"
+    <a href=\\"/test\\"> Test link </a>
+    <p class=\\"pinia\\">hi vitest</p>"
   `)
 })
