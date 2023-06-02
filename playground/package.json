@@ -7,9 +7,9 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "test:dev": "NUXT_VITEST_DEV_TEST=true nuxt dev",
-    "test:unit": "vitest",
+    "test:unit": "vitest run --coverage",
     "test:types": "nuxi prepare && vue-tsc --noEmit",
-    "test": "pnpm test:unit --run && pnpm test:dev && pnpm test:types"
+    "test": "pnpm test:unit && pnpm test:dev && pnpm test:types"
   },
   "devDependencies": {
     "@nuxt/devtools": "0.5.5",
